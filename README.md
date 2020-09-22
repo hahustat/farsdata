@@ -23,11 +23,11 @@ devtools::install_github("hahustat/farsdata")
 ## Review Criteria
 
 
-* Does this package contain the correct R file(s) under the R/ directory?
-* Does this package contain a man/ directory with corresponding documentation files?
-* Does this package contain a vignette which provides a meaningful description of the package and how it should be used?
-* Does this package have at least one test included in the tests/ directory?
-* Does this package have a NAMESPACE file?
-* Does the README.md file for this directory have a Travis badge?
-* Is the build of this package passing on Travis?
+* Does this package contain the correct R file(s) under the R/ directory?(https://github.com/hahustat/farsdata/tree/master/R)
+* Does this package contain a man/ directory with corresponding documentation files?(https://github.com/hahustat/farsdata/tree/master/man)
+* Does this package contain a vignette which provides a meaningful description of the package and how it should be used?(https://github.com/hahustat/farsdata/tree/master/vignettes)
+* Does this package have at least one test included in the tests/ directory?(https://github.com/hahustat/farsdata/tree/master/tests/testthat)
+* Does this package have a NAMESPACE file?(https://github.com/hahustat/farsdata/blob/master/NAMESPACE)
+* Does the README.md file for this directory have a Travis badge?(see above, https://github.com/hahustat/farsdata/blob/master/.travis.yml)
+* Is the build of this package passing on Travis?(https://travis-ci.org/github/hahustat/farsdata/builds/729279861)
 * Are the build logs for this package on Travis free of any errors, warnings, or notes?
