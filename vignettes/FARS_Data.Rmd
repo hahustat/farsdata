@@ -1,0 +1,61 @@
+---
+title: "FARS_Data"
+author: "Tedros gebregergs"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{FARS_Data}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = TRUE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+# Package Description
+`farsdata` package loads data from the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System(FARS).`FARS` data is  a nationwide census providing the American public yearly data regarding fatal injuries suffered in motor vehicle traffic crashes.  https://www.nhtsa.gov/Data/Fatality-Analysis-Reporting-System-(FARS).
+
+# install.packages("devtools")
+# devtools::install_github("hahustat/farsdata")
+
+```{r setup}
+library(farsdata)
+library(dplyr)
+library(maps)
+```
+
+# Loading/reading data
+
+```{r}
+list.files(system.file("extdata", package = "farsdata"))
+```
+
+## `make_filename` function
+A function with input of year from 2013-2015 and returns a file and a path to the data files in the source package.
+```{r}
+year_input<-2013
+make_filename(year_input)
+```
+## `fars_read_year` function
+A function which takes an input of years and uses `make_file` function to create a file, and then reads for each year using a function `fars_read`. Result of this function will be used as input to function `fars_summarize_years`.
+```{r}
+library(dplyr)
+fars_read_years(2015)
+```
+## `fars_summarize_years` function
+Taking organized data by function `fars_read_year`, summarizes yearly accidents data by month.
+
+```{r}
+fars_summarize_years(c(2013,2014,2015))
+```
+
+## `fars_map_state` function
+It displays a map of the inpute state of US for these have accidents by location and yearly.
+```{r}
+state.num<-20
+year_input<-2013
+fars_map_state(state.num,year_input)
+```

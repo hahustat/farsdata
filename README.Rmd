@@ -1,0 +1,39 @@
+# Build R Package Coursera
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# farsdata
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of farsdata is to load/read data from the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System(FARS). https://www.nhtsa.gov/Data/Fatality-Analysis-Reporting-System-(FARS).
+
+## Installation
+
+And the development version from [GitHub](https://github.com/hahustat/farsdata) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("hahustat/farsdata")
+```
+## Review Criteria
+
+
+* Does this package contain the correct R file(s) under the R/ directory?
+* Does this package contain a man/ directory with corresponding documentation files?
+* Does this package contain a vignette which provides a meaningful description of the package and how it should be used?
+* Does this package have at least one test included in the tests/ directory?
+* Does this package have a NAMESPACE file?
+* Does the README.md file for this directory have a Travis badge?
+* Is the build of this package passing on Travis?
+* Are the build logs for this package on Travis free of any errors, warnings, or notes?
