@@ -24,11 +24,11 @@ To import the accident data  saved as  \code{CSV} file, first uses function.
 To generate file name use: \code{\link{make_filename}}
 }
 \examples{
-\dontrun{
+library(dplyr)
 year_input <- 2013
 data <- year_input \%>\%
   make_filename \%>\%
   fars_read
 head(data)
-}
+
 }

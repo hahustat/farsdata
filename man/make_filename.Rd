@@ -16,7 +16,7 @@ It returns a character of file name, like "accident_2013.csv.bz2".
 \code{make_filename} function takes a year argument and creates a file name of the given year.
 }
 \examples{
-\dontrun{
-make_filename(2013)
-}
+year_input<-c(2013,2014,2015)
+make_filename(year_input)
+
 }

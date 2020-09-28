@@ -22,5 +22,7 @@ The \code{fars_summarize_years} function summarizes the number of accidents for
  it returns an error.
 }
 \examples{
-fars_summarize_years(c(2013,2014,2015))
+year_input<-c(2013,2014,2015)
+fars_summarize_years(year_input)
+#fars_summarize_years(c(2013,2014,2015))
 }

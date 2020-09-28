@@ -12,13 +12,13 @@
 #' @importFrom  readr read_csv
 #' @importFrom  tibble as_tibble
 #' @examples
-#' \dontrun{
+#' library(dplyr)
 #' year_input <- 2013
 #' data <- year_input %>%
 #'   make_filename %>%
 #'   fars_read
 #' head(data)
-#' }
+#'
 #' @note To generate file name use: \code{\link{make_filename}}
 #' @export
 fars_read <- function(filename) {
@@ -38,9 +38,9 @@ fars_read <- function(filename) {
 #' @return It returns a character of file name, like "accident_2013.csv.bz2".
 #'
 #' @examples
-#' \dontrun{
-#' make_filename(2013)
-#' }
+#' year_input<-c(2013,2014,2015)
+#' make_filename(year_input)
+#'
 #' @export
 make_filename <- function(year) {
   year <- as.integer(year)
@@ -71,7 +71,9 @@ make_filename <- function(year) {
 #'
 #'
 #' @examples
+#' year_input<-c(2013,2014,2015)
 #' fars_read_years(2015)
+#' fars_read_years(year_input)
 #'
 #' @export
 fars_read_years <- function(years) {
@@ -107,7 +109,9 @@ fars_read_years <- function(years) {
 #' @importFrom magrittr "%>%"
 #'
 #' @examples
-#' fars_summarize_years(c(2013,2014,2015))
+#' year_input<-c(2013,2014,2015)
+#' fars_summarize_years(year_input)
+#' #fars_summarize_years(c(2013,2014,2015))
 #' @export
 fars_summarize_years <- function(years) {
   dat_list <- fars_read_years(years)
@@ -160,4 +164,8 @@ fars_map_state <- function(state.num, year) {
     graphics::points(LONGITUD, LATITUDE, pch = 46)
   })
 }
+
+utils::globalVariables(c("STATE", "year", "MONTH"))
+
+
 

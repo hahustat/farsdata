@@ -27,6 +27,8 @@ Reads a FARS file for a given vector of years.
          two variables \code{MONTH}, \code{year}.
 }
 \examples{
+year_input<-c(2013,2014,2015)
 fars_read_years(2015)
+fars_read_years(year_input)
 
 }
